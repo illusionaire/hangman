@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
-    <device id="retina4_7" orientation="portrait">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,14 +18,74 @@
                         <viewControllerLayoutGuide type="bottom" id="Rkb-O3-rip"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xKS-yl-l6T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Puzzle String Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-cc-XRa">
+                                <rect key="frame" x="133.66666666666669" y="258" width="147.00000000000006" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-EK-MKe">
+                                <rect key="frame" x="107" y="28" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Guessed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-PG-Srr">
+                                <rect key="frame" x="170.66666666666666" y="298" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbc-3l-1wa">
+                                <rect key="frame" x="186" y="378" width="43" height="30"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="Guess:" destination="33m-bG-32Y" eventType="touchUpInside" id="Y6B-SS-FV4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess a letter!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0A-es-DUb">
+                                <rect key="frame" x="152" y="340" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="EgT-It-3Us"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-RS-cnE">
+                                <rect key="frame" x="166" y="455" width="83" height="30"/>
+                                <state key="normal" title="New Phrase"/>
+                                <connections>
+                                    <action selector="NewPhrase:" destination="33m-bG-32Y" eventType="touchUpInside" id="ULn-56-jEG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a8T-EK-MKe" firstAttribute="top" secondItem="fga-sG-nzY" secondAttribute="bottom" constant="8" symbolic="YES" id="3VU-ZV-WTI"/>
+                            <constraint firstItem="Lbc-3l-1wa" firstAttribute="top" secondItem="a8T-EK-MKe" secondAttribute="bottom" constant="170" id="9qk-Oh-smS"/>
+                            <constraint firstItem="a8T-EK-MKe" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="9xG-Dz-wVQ"/>
+                            <constraint firstItem="m0A-es-DUb" firstAttribute="centerX" secondItem="a8T-EK-MKe" secondAttribute="centerX" id="ABJ-VA-p3q"/>
+                            <constraint firstItem="AZy-cc-XRa" firstAttribute="centerX" secondItem="a8T-EK-MKe" secondAttribute="centerX" id="EFh-5h-Jwq"/>
+                            <constraint firstItem="1Pn-RS-cnE" firstAttribute="top" secondItem="a8T-EK-MKe" secondAttribute="bottom" constant="200" id="FYz-bW-cZe"/>
+                            <constraint firstItem="AZy-cc-XRa" firstAttribute="top" secondItem="a8T-EK-MKe" secondAttribute="bottom" constant="30" id="JrN-kR-1PT"/>
+                            <constraint firstItem="Q7v-PG-Srr" firstAttribute="centerX" secondItem="a8T-EK-MKe" secondAttribute="centerX" id="RHA-3I-8ee"/>
+                            <constraint firstItem="m0A-es-DUb" firstAttribute="top" secondItem="a8T-EK-MKe" secondAttribute="bottom" constant="120" id="SBJ-VH-JQe"/>
+                            <constraint firstItem="Lbc-3l-1wa" firstAttribute="centerX" secondItem="a8T-EK-MKe" secondAttribute="centerX" id="Sj6-un-wXF"/>
+                            <constraint firstItem="1Pn-RS-cnE" firstAttribute="centerX" secondItem="a8T-EK-MKe" secondAttribute="centerX" id="fzx-u8-0Dr"/>
+                            <constraint firstItem="Q7v-PG-Srr" firstAttribute="top" secondItem="a8T-EK-MKe" secondAttribute="bottom" constant="80" id="ub3-9a-qz2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Guessed" destination="Q7v-PG-Srr" id="6FK-qM-6yD"/>
+                        <outlet property="Image" destination="a8T-EK-MKe" id="8ej-fa-Hvt"/>
+                        <outlet property="Puzzle" destination="AZy-cc-XRa" id="IRW-Ok-hun"/>
+                        <outlet property="Textbox" destination="m0A-es-DUb" id="DL8-vC-Ynj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJo-zA-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="-133.5832083958021"/>
+            <point key="canvasLocation" x="650.72463768115949" y="-133.69565217391306"/>
         </scene>
     </scenes>
 </document>
